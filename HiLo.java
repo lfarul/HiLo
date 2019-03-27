@@ -1,6 +1,3 @@
-
-package hilo;
-
 import java.util.Scanner; // dodaję bibliotekę Scanner, która pozwoli zaimportować klasę scanner, która zawiera m.in. klasy nextLine() oraz nextInt().
 
 public class HiLo {
