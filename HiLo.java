@@ -24,15 +24,21 @@ public class HiLo {
 
             while (guess != theNumber) { // powtarzaj pętle tak długo jak zmienna guess jest różna od theNumber
                 System.out.print("Prosze podaj liczbe w przedziale -10 do 10: ");
-                guess = scan.nextInt(); 
+                guess = scan.nextInt();
+                
+                try {
                 if (guess < theNumber) 
                     System.out.println("Wybrana liczba jest za mała.");
                 else if (guess > theNumber) 
                     System.out.println("Wybrana liczba jest za duża.");
                 else 
                     System.out.println("BRAWO ! Wybrana liczba jest poprawna.");
-                
                 numofTries = numofTries + 1;
+                }
+                
+                catch (IndexOutOfBoundsException e) {
+                    System.out.println("Nie wybrano żadnej liczby");
+                }
                 
             } // zakończenie pętli while do zgadywania
             System.out.print("Na zgadniecie liczby potrzebowales " + numofTries + " prob.");
@@ -49,4 +55,3 @@ public class HiLo {
             
         } // ten nawias klamrowy zamyka metodę main ()
     } // ten nawias klamrowy zamyka całą klasę HiLo
-
